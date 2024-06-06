@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: color-mix(in xyz, rgb(7, 80, 205) 55%, rgba(140, 215, 215, 0.567) 59%);
+    display: flex;
+    justify-content: center;
+    
+}
+
+.card {
+    height: 480px;
+    width: 355px;
+    background-color: azure;
+    position: relative;
+    margin: 25px;
+    padding: auto;
+    border-radius: 25px;
+    top: 25px;
+}
+
+.todo {
+    font-family: cursive;
+    font-weight: bolder;
+    position: absolute;
+    font-size: 24px;
+    left: 30px;
+    top: 15px;
+}
+.bar{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 75px;
+    left: 30px;
+}
+.bar .inputfill{
+    height: 35px;
+    width:68% ;
+    text-indent: 15px;
+    border-radius: 26px;
+    outline: none;
+    border:none;
+    background-color: rgba(24, 21, 21, 0.063);
+    /* -ms-zoom: 30%; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+}
+.bar .btn{
+    width: 60px;
+    border-radius: 25px;
+    position: relative;
+    right: 25px;
+    background-color: rgb(241, 134, 12);
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
+    color: rgb(242, 242, 236);
+    cursor: pointer;
+}
+.card .tabl{
+    position: absolute;
+    top: 135px;
+    width: 100%;
+}
+.card .tabl ul{
+    gap: 15px;
+    flex-direction: column;
+   display: flex;
+    width: 100%;
+    height: 325px;
+    overflow-x: hidden;
+    overflow-y:visible;
+    direction: ltr;
+   
+}
+/* .card .tabl ul li{
+    list-style-position: inside;
+    list-style-image:url(images/unchecked.png) ;
+    width: 100%;
+    height: 25px;
+} */
+.card .tabl ul li {
+    list-style-type: none; /* Remove default list marker */
+    position: relative; 
+    width: 80%;
+    height:auto ;
+    list-style-position: inside;
+    padding-left: 40px; 
+    font-size: 19px;
+    font-family: cursive;
+    word-wrap: break-word;
+    padding-right: 25px;
+}
+.card .tabl ul li::before {
+    content: "";
+    display: inline-block;
+    background: url('images/unchecked.png') no-repeat;
+    background-size: contain; /* Scale image to fit its container */
+    width: 25px; /* Set width of image */
+    height: 25px; /* Set height of image */
+    position: absolute; /* Position pseudo-element relative to li */
+    left: 5px; 
+    top: 6px;
+}
+
+.card .tabl ul li.check{
+    list-style-type: none; /* Remove default list marker */
+    position: relative; /* Establish a positioning context for pseudo-element */
+    width: 80%;
+    height: 25px;
+    list-style-position: inside;
+    padding-left: 40px; /* Add space to the left of list item */
+    text-decoration: line-through;
+    word-wrap: break-word;
+    padding-right: 25px;
+}
+.card .tabl ul li.check::before {
+    content: "";
+    display: inline-block;
+    background: url('images/checked.png') no-repeat;
+    background-size: contain; /* Scale image to fit its container */
+    width: 25px; /* Set width of image */
+    height: 25px; /* Set height of image */
+    position:absolute ; /* pseudo-element relative to li */
+    left: 5px; 
+}
+.check .del{
+    position: absolute;
+    cursor: pointer;
+    bottom: 13px;
+    text-decoration: none;
+    width: 20px;
+    height: 20px;
+    font-size: medium;
+    border-radius: 5px;
+    border: none;
+    background-color:azure;
+    left: 90%;
+    bottom: 7px;
+}
+.btn:hover{
+    background-color: orange;
+}
+.inputfill:hover{
+    opacity: 0.78;
+}
+.del:hover{
+    background-color:rgba(232, 219, 219, 0.649);
+}
