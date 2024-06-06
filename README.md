@@ -1,1 +1,1 @@
-this is a collecction of beginetr javascript project
+this is a collection of beginner javascript project
