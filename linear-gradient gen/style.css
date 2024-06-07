@@ -73,4 +73,5 @@ body{
     width: 149px;
     position: relative;
     left: 10px;
+    display:flex;
 }
